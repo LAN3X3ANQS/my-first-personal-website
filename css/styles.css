@@ -1,0 +1,46 @@
+body {
+    background-color: #FFE8CD;
+}
+hr {
+    border-color: #f9f9f9;
+    border-width: 8px;
+    border-style: dotted none none;
+    width: 30%;
+}
+table {
+    margin: 0 auto;
+}
+p, h3 {
+    text-align: center;
+}
+ul, ol {
+    width: 50%;
+    margin: 0 auto;
+}
+/* ...existing code... */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    width: 350px;
+    margin: 15px auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #fffbe6; /* soft cream */
+}
+/* or */
+fieldset {
+    /* ...existing code... */
+    background-color: #f9f9f9; /* light gray */
+}
+
+legend {
+    font-weight: bold;
+    text-align: center;
+}
