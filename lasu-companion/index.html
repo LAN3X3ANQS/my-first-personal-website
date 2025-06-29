@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LASU Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header class="navbar">
+  <div class="logo-section">
+    <img src="lasu-logo.jpeg" alt="LASU Logo" class="logo">
+    <span class="site-name">LASU Companion</span>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="task.html">Tasks</a>
+    <a href="cbt.html">CBT</a>
+    <a href="match.html">Match</a>
+    <a href="navigator.html">Navigator</a>
+    <button id="modeBtn" onclick="toggleMode()">change</button>
+  </nav>
+</header>
+
+  <div class="container">
+    <h1>Welcome to LASU Companion</h1>
+    <p>Your smart assistant for academics and campus life!</p>
+
+  <div id="ongoing-box" class="first-section"><h3>📚 Ongoing Lectures</h3>
+    <p>Click to see the current lectures...</p></div>
+
+  <div id="leaderboards" class="first-section"><h3>📚 Leaderboards</h3>
+    <p>Click to see the leaderboards...</p></div>
+
+
+    <div class="features">
+      <a href="task.html" class="btn">📋 Task Manager</a>
+      <a href="cbt.html" class="btn">🧠 CBT Practice</a>
+      <a href="#" class="btn">🗺️ Campus Navigator</a>
+      <a href="#" class="btn">🤝 Study Partner Match</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Built by Oluwaniyi Olanrewaju • LASU Tech Summit 2025</p>
+  </footer>
+
+  <script src="lectures.js"></script>
+  <script src="mode.js"></script>
+</body>
+</html>

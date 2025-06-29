@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LASU Companion - CBT</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cbt-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: var(--cream, #fff);
+      border-bottom: 1.5px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(110, 20, 20, 0.06);
+      margin-bottom: 24px;
+    }
+    .cbt-header .site-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    .cbt-header .cbt-header-info {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    #cbt-quiz { margin-top: 32px; }
+    @media (max-width: 600px) {
+      .cbt-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 10px 8px;
+      }
+    }
+    /* Add to your <style> or style.css */
+    .cbt-header {
+      background: var(--wine, #800020) !important;
+      color: var(--cream, #fff8e7) !important;
+    }
+    .cbt-header .site-name,
+    .cbt-header .cbt-header-info span {
+      color: var(--cream, #fff8e7) !important;
+    }
+  </style>
+  <!-- Add this inside the <head> tag of your cbt.html (or your main HTML file) -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Original header/nav (visible until test starts) -->
+    <header class="navbar" id="mainHeader">
+         <div>
+      <span class="site-name">Lasu Companion - CBT</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="task.html">Tasks</a>
+      <a href="cbt.html">CBT</a>
+      <a href="match.html">Match</a>
+      <a href="navigator.html">Navigator</a>
+      <button id="modeBtn" onclick="toggleMode()">change</button>
+    </nav>  
+    </header>
+
+    <!-- CBT Header (hidden until test starts) -->
+    <header class="cbt-header" id="cbtHeader" style="display:none;">
+      <span class="site-name">Lasu Companion - CBT</span>
+      <div class="cbt-header-info">
+        <span id="current-course" style="font-weight:600;">Course: </span>
+        <span id="cbt-timer" style="font-weight:600;">Time Left: --:--</span>
+      </div>
+    </header>
+
+  <div class="container" id="setup-container">
+    <h1>Take a CBT Test</h1>
+    <p>Simulate real exam conditions and track your score.</p>
+  </div>
+  <section class="cbt-setup container" id="cbt-setup-section">
+    <h2>Choose your Department</h2>
+    <div class="radio-group" id="department-group">
+      <div id="elect-box" class="first-section"><label><input type="radio" name="department" value="ece"> Electronics & Computer</label></div>
+      <div id="civil-box" class="first-section"><label><input type="radio" name="department" value="civil"> Civil Engineering</label></div>
+      <div id="aero-box" class="first-section"><label><input type="radio" name="department" value="aero"> Aerospace Engineering</label></div>
+      <div id="mech-box" class="first-section"><label><input type="radio" name="department" value="mech"> Mechanical Engineering</label></div>
+      <div id="indust-box" class="first-section"><label><input type="radio" name="department" value="indust"> Industrial Engineering</label></div>
+      <div id="chem-box" class="first-section"><label><input type="radio" name="department" value="chem"> Chemical & Polymer</label></div>
+    </div>
+
+    <div id="course-section" style="display:none;">
+      <h2>Select a Course</h2>
+      <div class="radio-group" id="course-group"></div>
+    </div>
+
+    <div id="test-options" style="display:none;">
+      <h2>Test Options</h2>
+      <label>Number of Questions:
+        <select id="question-count">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+        </select>
+      </label>
+      <label>Duration (minutes):
+        <select id="duration">
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          <option>30</option>
+        </select>
+      </label>
+    </div>
+    <button id="localstartBtn">Start Test</button>
+  </section>
+
+  <!-- Quiz Container (hidden until test starts) -->
+  <div id="cbt-quiz" style="display:none;"></div>
+
+  <script src="cbt.js"></script>
+  <script>
+    // Helper: get selected radio value
+    function getCheckedValue(name) {
+      const checked = document.querySelector('input[name="' + name + '"]:checked');
+      return checked ? checked.value : null;
+    }
+
+    // Start Test button logic
+    document.getElementById('localstartBtn').onclick = function() {
+      // Get selected values
+      const department = getCheckedValue('department');
+      const course = getCheckedValue('course');
+      const questionCount = document.getElementById('question-count').value;
+      const duration = document.getElementById('duration').value;
+
+      // Save to localStorage (optional, for consistency)
+      localStorage.setItem('cbt_department', department);
+      localStorage.setItem('cbt_course', course);
+      localStorage.setItem('cbt_questionCount', questionCount);
+      localStorage.setItem('cbt_duration', duration);
+
+      // Hide setup and main header/nav
+      document.getElementById('mainHeader').style.display = "none";
+      document.getElementById('setup-container').style.display = "none";
+      document.getElementById('cbt-setup-section').style.display = "none";
+      // Show CBT header and quiz
+      document.getElementById('cbtHeader').style.display = "flex";
+      document.getElementById('cbt-quiz').style.display = "block";
+
+      // Set course name in header
+      document.getElementById('current-course').textContent = "Course: " + (course || "N/A");
+
+      // Start timer
+      let seconds = Number(duration) * 60;
+      const timerSpan = document.getElementById('cbt-timer');
+      function updateTimer() {
+        const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const sec = String(seconds % 60).padStart(2, '0');
+        timerSpan.textContent = `Time Left: ${min}:${sec}`;
+        if (seconds > 0) {
+          seconds--;
+          setTimeout(updateTimer, 1000);
+        } else {
+          timerSpan.textContent = "Time's up!";
+        }
+      }
+      updateTimer();
+
+      // Start the test (cbt.js must define startCBTTest)
+      if (typeof startCBTTest === "function") startCBTTest();
+    };
+  </script>
+</body>
+</html>
