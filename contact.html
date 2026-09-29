@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Oluwaniyi Olanrewaju</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Oluwaniyi Olanrewaju</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell contact-page">
+      <section class="section contact-intro">
         <h3>Have a question, a project idea, or just want to say hello?</h3>
-        <p>Feel free to reach out using any the contact form below. I look forward to hearing from you and will respond as soon as possible.</p>
-        <p><strong>Please fill out the form below</strong></p>
-        <form action="mailto:fake@gmail.com">
-            <fieldset>
-                <legend>Contact Details</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea><br>
-                <strong>Gender</strong>
-                <label for="male">Male</label>
-                <input type="radio" id="male" name="gender" value="male" required>
-                <label for="female">Female</label>
-                <input type="radio" id="female" name="gender" value="female" required>
-                <label for="other">Other</label>
-                <input type="radio" id="other" name="gender" value="other" required>
-            </fieldset>
-            <fieldset>
-                <legend>Other Information</legend>
-                <label for="contact-method">Preferred contact method:</label>
-                <select id="contact-method" name="contact-method">
-                    <option value="email">Email</option>
-                    <option value="phone">Phone</option>
-                    <option value="whatsapp">WhatsApp</option>
-                </select><br>
-                <label for="best-time">Best time to contact you:</label>
-                <input type="text" id="best-time" name="best-time" placeholder="e.g., Afternoon"><br>
-                <label for="referral">How did you hear about me?</label>
-                <input type="text" id="referral" name="referral"><br>
-                <label for="comments">Additional comments:</label>
-                <textarea id="comments" name="comments"></textarea><br>
-            </fieldset>
-            <input type="submit" value="Submit">
-        </form>
-          <address>
-             <p>Phone No. <a href="tel:+1234567890000">0123456789000</a></p>
-             <p>Whatsapp: Same as phone number</p>
-             <p>gmail:<strong><a href="mailto:fake@gmail.com">fake@gmail.com</a></strong></p>
-             <p>Facebook:<strong>Oluwaniyi Olanrewaju</strong></p>
-        </address>
-        <footer>
-            <p>&copy; 2023 Oluwaniyi Olanrewaju. All rights reserved.</p>
-        </footer>
-    </body>
+        <p>
+          Feel free to reach out using any of the contact options below. I look forward to hearing from you and will respond as soon as possible.
+        </p>
+        <p class="prompt"><strong>Please fill out the form below</strong></p>
+      </section>
+
+      <form action="mailto:olanrewajubanqs003@gmail.com" class="contact-form">
+        <fieldset>
+          <legend>Contact Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <div class="radio-group">
+            <span><strong>Gender</strong></span>
+            <label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
+            <label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
+            <label for="other"><input type="radio" id="other" name="gender" value="other" required> Other</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Other Information</legend>
+          <label for="contact-method">Preferred contact method:</label>
+          <select id="contact-method" name="contact-method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="whatsapp">WhatsApp</option>
+          </select>
+
+          <label for="best-time">Best time to contact you:</label>
+          <input type="text" id="best-time" name="best-time" placeholder="e.g., Afternoon">
+
+          <label for="referral">How did you hear about me?</label>
+          <input type="text" id="referral" name="referral">
+
+          <label for="comments">Additional comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <footer>
+        <p>&copy; 2023 Oluwaniyi Olanrewaju. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
 </html>
