@@ -3,64 +3,75 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Oluwaniyi Olanrewaju</title>
+    <meta name="theme-color" content="#13231f">
+    <meta name="description" content="Get in touch with Oluwaniyi Olanrewaju to talk about engineering, technology, projects, or a good idea.">
+    <title>Get in touch | Oluwaniyi Olanrewaju</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <div class="page-shell contact-page">
-      <section class="section contact-intro">
-        <h3>Have a question, a project idea, or just want to say hello?</h3>
-        <p>
-          Feel free to reach out using any of the contact options below. I look forward to hearing from you and will respond as soon as possible.
-        </p>
-        <p class="prompt"><strong>Please fill out the form below</strong></p>
-      </section>
+  <body class="contact-body">
+    <main class="contact-page">
+      <header class="contact-nav">
+        <a class="contact-wordmark" href="index.html" aria-label="Oluwaniyi Olanrewaju, home">OO<span>.</span></a>
+        <a class="back-link" href="index.html"><span aria-hidden="true">&larr;</span> Back to my site</a>
+      </header>
 
-      <form action="mailto:olanrewajubanqs003@gmail.com" class="contact-form">
-        <fieldset>
-          <legend>Contact Details</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+      <div class="contact-layout">
+        <section class="contact-intro" aria-labelledby="contact-heading">
+          <p class="contact-eyebrow"><span></span> OPEN TO A CONVERSATION</p>
+          <h1 id="contact-heading">Curious about circuits, code, or a good idea?</h1>
+          <p class="contact-lede">I’m Oluwaniyi, an Electronics and Computer Engineering student who loves exploring how software and hardware come together. Tell me what you’re thinking about.</p>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <div class="radio-group">
-            <span><strong>Gender</strong></span>
-            <label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
-            <label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
-            <label for="other"><input type="radio" id="other" name="gender" value="other" required> Other</label>
+          <div class="contact-portrait">
+            <img src="1000000774.jpg" alt="Oluwaniyi Olanrewaju">
+            <div>
+              <strong>Oluwaniyi Olanrewaju</strong>
+              <span>Engineering student · Lagos, Nigeria</span>
+            </div>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend>Other Information</legend>
-          <label for="contact-method">Preferred contact method:</label>
-          <select id="contact-method" name="contact-method">
-            <option value="email">Email</option>
-            <option value="phone">Phone</option>
-            <option value="whatsapp">WhatsApp</option>
-          </select>
+          <div class="interest-list" aria-label="Current interests">
+            <span>Embedded systems</span>
+            <span>C programming</span>
+            <span>Hardware &amp; VLSI</span>
+          </div>
+          <a class="direct-email" href="mailto:olanrewajubanqs003@gmail.com">olanrewajubanqs003@gmail.com <span aria-hidden="true">&nearr;</span></a>
+        </section>
 
-          <label for="best-time">Best time to contact you:</label>
-          <input type="text" id="best-time" name="best-time" placeholder="e.g., Afternoon">
+        <section class="contact-form-panel" aria-labelledby="form-heading">
+          <div class="form-heading-row">
+            <div>
+              <p class="form-kicker">START A CONVERSATION</p>
+              <h2 id="form-heading">What’s on your mind?</h2>
+            </div>
+            <span class="form-mark" aria-hidden="true">↗</span>
+          </div>
 
-          <label for="referral">How did you hear about me?</label>
-          <input type="text" id="referral" name="referral">
+          <form action="mailto:olanrewajubanqs003@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <div class="field-row">
+              <div class="form-field">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="Name" autocomplete="name" placeholder="Ada Lovelace" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="Email" autocomplete="email" placeholder="ada@example.com" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="Message" rows="5" placeholder="A project, a question, an idea… start anywhere." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send your message <span aria-hidden="true">&rarr;</span></button>
+            <p class="form-note">This opens your email app so you can review your message before sending.</p>
+          </form>
+        </section>
+      </div>
 
-          <label for="comments">Additional comments:</label>
-          <textarea id="comments" name="comments"></textarea>
-        </fieldset>
-
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
-
-      <footer>
-        <p>&copy; 2023 Oluwaniyi Olanrewaju. All rights reserved.</p>
+      <footer class="contact-footer">
+        <a href="index.html">Oluwaniyi Olanrewaju</a>
+        <span>Built with curiosity in Lagos.</span>
+        <span>&copy; 2026</span>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
