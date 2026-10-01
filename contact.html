@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#13231f">
+    <meta name="theme-color" content="#102b49">
     <meta name="description" content="Get in touch with Oluwaniyi Olanrewaju to talk about engineering, technology, projects, or a good idea.">
     <title>Get in touch | Oluwaniyi Olanrewaju</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern.css">
   </head>
   <body class="contact-body">
+    <a class="skip-link" href="#form-heading">Skip to contact form</a>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <main class="contact-page">
-      <header class="contact-nav">
-        <a class="contact-wordmark" href="index.html" aria-label="Oluwaniyi Olanrewaju, home">OO<span>.</span></a>
-        <a class="back-link" href="index.html"><span aria-hidden="true">&larr;</span> Back to my site</a>
+      <header class="site-header contact-nav">
+        <a class="site-brand" href="index.html" aria-label="Oluwaniyi Olanrewaju, home">OO<span>.</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html#about">About</a>
+          <a href="index.html#interests">Interests</a>
+          <a href="index.html#background">Background</a>
+        </nav>
+        <a class="nav-contact" href="mailto:olanrewajubanqs003@gmail.com">Email me <span aria-hidden="true">↗</span></a>
       </header>
 
       <div class="contact-layout">
-        <section class="contact-intro" aria-labelledby="contact-heading">
+        <section class="contact-intro" aria-labelledby="contact-heading" data-reveal>
           <p class="contact-eyebrow"><span></span> OPEN TO A CONVERSATION</p>
           <h1 id="contact-heading">Curious about circuits, code, or a good idea?</h1>
-          <p class="contact-lede">I’m Oluwaniyi, an Electronics and Computer Engineering student who loves exploring how software and hardware come together. Tell me what you’re thinking about.</p>
+          <p class="contact-lede">I’m Olanrewaju, an Electronics and Computer Engineering student who loves exploring how software and hardware come together. Tell me what you’re thinking about.</p>
 
           <div class="contact-portrait">
             <img src="1000000774.jpg" alt="Oluwaniyi Olanrewaju">
@@ -34,10 +42,15 @@
             <span>C programming</span>
             <span>Hardware &amp; VLSI</span>
           </div>
-          <a class="direct-email" href="mailto:olanrewajubanqs003@gmail.com">olanrewajubanqs003@gmail.com <span aria-hidden="true">&nearr;</span></a>
+          <div class="email-actions">
+            <a class="direct-email" href="mailto:olanrewajubanqs003@gmail.com">olanrewajubanqs003@gmail.com <span aria-hidden="true">&nearr;</span></a>
+            <button class="copy-email" type="button" data-copy="olanrewajubanqs003@gmail.com" aria-label="Copy email address" title="Copy email address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+            </button>
+          </div>
         </section>
 
-        <section class="contact-form-panel" aria-labelledby="form-heading">
+        <section class="contact-form-panel" aria-labelledby="form-heading" data-reveal>
           <div class="form-heading-row">
             <div>
               <p class="form-kicker">START A CONVERSATION</p>
@@ -70,8 +83,11 @@
       <footer class="contact-footer">
         <a href="index.html">Oluwaniyi Olanrewaju</a>
         <span>Built with curiosity in Lagos.</span>
-        <span>&copy; 2026</span>
+        <span>&copy; <span data-current-year>2026</span></span>
       </footer>
     </main>
+    <div class="toast-message" role="status" aria-live="polite"></div>
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    <script src="site.js" defer></script>
   </body>
 </html>

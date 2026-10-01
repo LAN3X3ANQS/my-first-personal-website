@@ -3,104 +3,168 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olanrewaju's first personal website</title>
+    <meta name="theme-color" content="#102b49">
+    <meta name="description" content="Meet Oluwaniyi Olanrewaju, an Electronics and Computer Engineering student exploring embedded systems, C programming, and hardware design.">
+    <title>Oluwaniyi Olanrewaju | Engineering student</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern.css">
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="hero section">
-        <div class="profile-image-wrap">
-          <img src="1000000774.jpg" alt="Olanrewaju's profile picture">
-        </div>
-
-        <div class="profile-text">
-          <p class="eyebrow">Student profile</p>
-          <h1>Oluwaniyi Olanrewaju</h1>
-          <p><em>First year student</em></p>
-          <p><em>Faculty of Engineering</em></p>
-          <p>
-            <em>
-              Department of
-              <a href="https://lasu.edu.ng/lasu_consult/home/curriculum/ElectronicComputerEngineering.pdf">
-                <strong>Electronics and Computer Engineering</strong>
-              </a>
-            </em>
-          </p>
-          <p>
-            <a href="https://www.lasu.edu.ng/">
-              <strong><em>LASU Ojo, Lagos State.</em></strong>
-            </a>
-          </p>
-        </div>
+  <body class="home-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-brand" href="index.html" aria-label="Oluwaniyi Olanrewaju, home">OO<span>.</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#interests">Interests</a>
+          <a href="#background">Background</a>
+        </nav>
+        <a class="nav-contact" href="contact.html">Let’s talk <span aria-hidden="true">↗</span></a>
       </header>
 
-      <main class="content">
-        <section class="section intro">
-          <h3>About Me</h3>
-          <p>
-            I am an Electronics and Computer Engineering student at Lagos State University (LASU) with a growing focus on embedded systems, hardware design, and VLSI. I am building a strong foundation in C programming, electronics, microcontrollers, and digital systems while exploring how software and hardware work together to create practical solutions. I enjoy learning by building projects, solving technical problems, and continuously developing my skills toward a career in computer hardware and chip design.
-
-          </p>
-        </section>
-
-        <div class="info-grid">
-          <section class="section">
-            <h3>Previous Education</h3>
-            <ul>
-              <li><strong>St. Joshua Nursery and Primary Schools</strong><br><span>- early stages, kindergarten, and early primary education.</span></li>
-              <li><strong>Kenny Grace</strong><br><span>- primary education.</span></li>
-              <li><strong>Harmony Schools</strong><br><span>- primary education.</span></li>
-              <li>
-                <strong><a href="https://lasu.edu.ng/home/lasuis/">Lagos State University International School (LASUIS)</a></strong><br>
-                <span>- secondary education.</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="section">
-            <h3>Current Education</h3>
-            <ul>
-              <li>
-                <strong><a href="https://www.lasu.edu.ng/">Lagos State University (LASU)</a></strong><br>
-                <span>- tertiary education.</span>
-              </li>
-            </ul>
-          </section>
-        </div>
-
-        <section class="section">
-          <h3>My Hobbies</h3>
-          <ol>
-            <li>Coding</li>
-            <li>Watching Movies</li>
-            <li>Art and Animation</li>
-            <li>Reading</li>
-            <li><a href="https://scontent.flos5-2.fna.fbcdn.net/v/t39.30808-6/489686913_1222185389616736_5754021435414931230_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFjOcJFXlCRquzncvW51SWsJESA9qUcLvkkRID2pRwu-d0NrnenLC4xuE2biw-KGiPOHB-OQK2VksTsbroCtnEt&_nc_ohc=6_ZwCAZ4HMAQ7kNvwGW0QNW&_nc_oc=AdlUX5ChL9YXscYRHnGOZGDRGwK6HNKO5P42AGRKIMr_2c-nYgTNR_z29C22CZZAO7k&_nc_zt=23&_nc_ht=scontent.flos5-2.fna&_nc_gid=m0brI3bJcWJVuX_Kv85QWQ&oh=00_AfLwucpoXq22E8bIH2GF20TNVN8Rm3Ir2EXG9Qm2AaqhoA&oe=682D8063">Music</a></li>
-          </ol>
-        </section>
-
-        <section class="section">
-          <h3>Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-column">
-              <div class="skill-row"><span>Coding</span><span>⭐⭐⭐⭐</span></div>
-              <div class="skill-row"><span>Music</span><span>⭐⭐⭐⭐</span></div>
-              <div class="skill-row"><span>Engineering drawing</span><span>⭐⭐⭐⭐⭐</span></div>
-              <div class="skill-row"><span>Mathematics</span><span>⭐⭐⭐⭐⭐</span></div>
+      <main id="main-content">
+        <section class="home-hero" aria-labelledby="hero-title">
+          <div class="hero-copy" data-reveal>
+            <p class="hero-eyebrow"><span></span> ELECTRONICS &amp; COMPUTER ENGINEERING</p>
+            <h1 id="hero-title">I’m drawn to the space <span>between circuits and code.</span></h1>
+            <p class="hero-description">I’m Olanrewaju, a student at Lagos State University learning how hardware and software can work together to solve real problems.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="contact.html">Start a conversation <span aria-hidden="true">→</span></a>
+              <a class="button button-quiet" href="#interests">A little about me <span aria-hidden="true">↓</span></a>
             </div>
-
-            <div class="skill-column">
-              <div class="skill-row"><span>Web development</span><span>⭐⭐</span></div>
-              <div class="skill-row"><span>Arduino</span><span>⭐⭐⭐⭐⭐</span></div>
-              <div class="skill-row"><span>Drawing</span><span>⭐⭐⭐⭐⭐</span></div>
-              <div class="skill-row"><span>Guitar playing</span><span>⭐⭐⭐⭐</span></div>
+            <div class="hero-meta">
+              <span>Based in Lagos, Nigeria</span>
+              <span class="meta-divider" aria-hidden="true"></span>
+              <span>Currently learning, always curious</span>
             </div>
           </div>
+          <figure class="hero-portrait" data-reveal>
+            <img src="1000000774.jpg" alt="Oluwaniyi Olanrewaju">
+            <figcaption><span class="portrait-marker" aria-hidden="true"></span> Learning by building</figcaption>
+          </figure>
+          <span class="hero-index" aria-hidden="true">PROFILE / 01</span>
+        </section>
+
+        <section class="content-section about-section" id="about" aria-labelledby="about-title" data-reveal>
+          <div class="section-label"><span>01</span> A SHORT INTRODUCTION</div>
+          <div class="about-copy">
+            <h2 id="about-title">Building a foundation, one question at a time.</h2>
+            <p>I’m an Electronics and Computer Engineering student at Lagos State University. I’m growing my skills in C programming, electronics, microcontrollers, and digital systems, with a particular curiosity about embedded systems, hardware design, and VLSI.</p>
+            <p>I enjoy learning through projects, working through technical problems, and discovering how an idea moves from software into the physical world.</p>
+          </div>
+        </section>
+
+        <section class="content-section interests-section" id="interests" aria-labelledby="interests-title">
+          <div class="section-heading" data-reveal>
+            <div class="section-label"><span>02</span> WHAT I’M EXPLORING</div>
+            <h2 id="interests-title">A few things that keep me curious.</h2>
+          </div>
+          <div class="interest-grid">
+            <article class="interest-item" data-reveal>
+              <span class="interest-number">01 / SYSTEMS</span>
+              <h3>Embedded systems</h3>
+              <p>Exploring the meeting point of microcontrollers, electronics, and useful real-world ideas.</p>
+              <span class="interest-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="interest-item" data-reveal>
+              <span class="interest-number">02 / SOFTWARE</span>
+              <h3>C &amp; programming</h3>
+              <p>Strengthening my programming fundamentals and learning to think clearly about a problem.</p>
+              <span class="interest-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="interest-item" data-reveal>
+              <span class="interest-number">03 / HARDWARE</span>
+              <h3>Hardware &amp; VLSI</h3>
+              <p>Following my curiosity about digital systems, computer hardware, and chip design.</p>
+              <span class="interest-arrow" aria-hidden="true">↗</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section background-section" id="background" aria-labelledby="background-title">
+          <div class="section-heading" data-reveal>
+            <div class="section-label"><span>03</span> WHERE I’VE LEARNED</div>
+            <h2 id="background-title">The path so far.</h2>
+          </div>
+          <div class="education-list">
+            <article class="education-item" data-reveal>
+              <span class="education-dot" aria-hidden="true"></span>
+              <div class="education-date">CURRENT</div>
+              <div class="education-details">
+                <h3><a href="https://www.lasu.edu.ng/">Lagos State University</a></h3>
+                <p>Electronics and Computer Engineering · Faculty of Engineering</p>
+              </div>
+              <span class="education-place">Ojo, Lagos</span>
+            </article>
+            <article class="education-item" data-reveal>
+              <span class="education-dot" aria-hidden="true"></span>
+              <div class="education-date">SECONDARY</div>
+              <div class="education-details">
+                <h3><a href="https://lasu.edu.ng/home/lasuis/">Lagos State University International School</a></h3>
+                <p>Secondary education</p>
+              </div>
+              <span class="education-place">Lagos</span>
+            </article>
+            <article class="education-item" data-reveal>
+              <span class="education-dot" aria-hidden="true"></span>
+              <div class="education-date">EARLIER</div>
+              <div class="education-details">
+                <h3>Harmony Schools · Kenny Grace · St. Joshua</h3>
+                <p>Earlier chapters of my education</p>
+              </div>
+              <span class="education-place">Nigeria</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section skills-section" aria-labelledby="skills-title">
+          <div class="section-heading" data-reveal>
+            <div class="section-label"><span>04</span> SKILLS &amp; OFF-SCREEN INTERESTS</div>
+            <h2 id="skills-title">More than one kind of practice.</h2>
+          </div>
+          <div class="skills-layout">
+            <div class="skills-list" aria-label="Self-rated skills">
+              <div class="skill-item" data-reveal><span>Coding</span><span class="skill-rating" aria-label="4 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Arduino</span><span class="skill-rating" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Web development</span><span class="skill-rating" aria-label="2 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Engineering drawing</span><span class="skill-rating" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Mathematics</span><span class="skill-rating" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Drawing</span><span class="skill-rating" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="skill-item" data-reveal><span>Music &amp; guitar</span><span class="skill-rating" aria-label="4 out of 5"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <aside class="outside-interests" data-reveal>
+              <p class="outside-kicker">WHEN I’M NOT BUILDING</p>
+              <h3>There’s room for art, stories, and a good playlist.</h3>
+              <div class="hobby-list"><span>Art &amp; animation</span><span>Reading</span><span>Movies</span><span>Music</span></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="closing-cta" aria-labelledby="closing-title" data-reveal>
+          <div>
+            <p class="section-label">A GOOD PLACE TO START</p>
+            <h2 id="closing-title">Have a question, project idea, or something to share?</h2>
+          </div>
+          <a class="button button-primary" href="contact.html">I’d love to hear from you <span aria-hidden="true">↗</span></a>
+          <span class="cta-orbit" aria-hidden="true"></span>
         </section>
       </main>
 
-      <p class="footer-link">Link to: <a href="contact.html">Contact information</a></p>
+      <footer class="site-footer">
+        <a class="site-brand" href="#main-content">OO<span>.</span></a>
+        <span>Built with curiosity in Lagos.</span>
+        <a href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
+        <span>&copy; <span data-current-year>2026</span> Oluwaniyi Olanrewaju</span>
+      </footer>
     </div>
+
+    <a class="floating-contact" href="contact.html" aria-label="Get in touch">
+      <span class="floating-icon" aria-hidden="true">↗</span>
+      <span>Let’s talk</span>
+    </a>
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+    <script src="site.js" defer></script>
   </body>
 </html>
 
